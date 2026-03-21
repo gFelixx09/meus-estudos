@@ -1,0 +1,407 @@
+body {
+   padding: 0;
+   margin: 0;
+   background-image: linear-gradient(rgba(0,0,0,0.4)), url(../img/Ubiratan.png);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   overflow-x: hidden; 
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+#menu-principal {
+    display: flex;
+    justify-content: center;
+    border: 0.070rem solid white;
+    background-color: rgba(100, 100, 100, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15rem;
+    padding: 0.1rem 1.8rem;
+    margin-top: 3rem;
+    position: fixed;
+    z-index: 1000;
+}
+#menu-principal ul {
+    display: flex; /* LAYOUT DEITADO/HORIZONTAL - INTACTO */
+    list-style: none;
+    gap:2rem;
+}
+#menu-principal a {
+    color: white;
+    text-decoration: none;
+}
+#menu-principal ul li a:hover{
+    background-color: rgba(100, 100, 100, 0.9);
+    border-radius: 3rem;
+    padding:0.6rem 0.4rem ;
+    color: #000;
+    
+
+}
+#menu-principal ul li a.active {
+    background-color: rgba(0, 44, 187, 0.8);   
+    border-radius: 3rem;
+    padding: 0.7rem 1.2rem;
+    transform: scale(1.05);
+}
+h1 {
+    text-align: left;
+    color: #01055d;
+    margin-left: 11rem; 
+    margin-top: 10rem;
+    margin-bottom: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 7rem; 
+}
+#inicio {
+    width: 70rem; 
+    height: 40rem;
+    margin-right: 0.1rem;
+    background-image: url(../img/download.jpeg);
+    margin: 10rem;
+    border-radius: 5rem;
+    overflow: visible;
+    border: 0.5rem solid rgb(235, 237, 244);
+    margin-top: 0.5rem;
+}
+#inicio img {
+  width: 55rem; 
+  margin-top: -21.6rem;
+  margin-left: 25.7rem;
+  
+}
+
+.timeline {
+  position: relative;
+  max-width: 37rem;
+  margin: 3rem auto;
+  padding-left: 40px;
+  border-left: 0.6rem solid #01055d; 
+  margin-left: 45rem; 
+  
+}
+
+.timeline-item {
+  margin: 20rem 0;
+  position: relative;
+  margin-top: -2rem;
+  
+}
+.timeline-item.left{
+  left: -43rem; 
+  text-align: right;
+}
+.timeline-item.rigth{
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.3rem;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #010920; 
+  border-radius: 50%;
+  border: 0.1rem solid #ffffff;
+}
+
+.timeline-item.right::before {
+  left: -3.6rem;
+}
+
+.timeline-item.left::before {
+  margin-left: 41.7rem; 
+}
+
+.timeline-content {
+  background: white;
+  padding: 2.5rem 20px;
+  border-radius: 10px;
+  color: black;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.timeline-content p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  text-align: center justify;
+}
+.timeline-content:hover p {
+  max-height: 200px;
+  opacity: 1;
+}
+.timeline-content:hover{
+ box-shadow: 0 0 15px rgb(12, 2, 120);
+  transform: scale(1.03);
+}
+.timeline-content h3 {
+  margin: 0 0 5px;
+  color: #333;
+  font-family:'ubuntu', sans-serif ;
+  text-align: center;
+  color: #01055d;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #555;
+  text-align: center;
+  margin-top: 0.9rem;
+
+}
+#linha-separadora{
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);;
+    margin-top: -5rem;
+}
+.final {
+    background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(60,60,60,0.4));
+    backdrop-filter: blur(4px); 
+    padding: 4rem;
+    margin: 0 auto;
+}
+.final p{
+    text-align: center;
+    color: rgb(241, 231, 231);
+    margin-top: 3rem;
+}
+.img-principal {
+    width: 16rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: -7rem;
+}
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    
+    
+}
+.cont img {
+    width: 2rem;
+    background-color: rgba(255, 255, 255, 0.8) ;
+    padding: 0.3rem;
+    border-radius: 2rem;
+    margin-top: -1rem;
+
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 0.8s ease forwards;
+}
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+.scroll-fade.visivel {
+    opacity: 1;
+    transform: translateY(0);
+} 
+.scroll-fade:nth-child(1) {transition-delay: 0.2s; }
+.scroll-fade:nth-child(2) {transition-delay: 0.3s; }
+.scroll-fade:nth-child(3) {transition-delay: 0.4s; }
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.fade-in:nth-child(1) { animation-delay: 0s; }
+.fade-in:nth-child(2) { animation-delay: 0.3s; }
+.fade-in:nth-child(3) { animation-delay: 0.4s; }
+
+@media screen and (max-width:768px){
+    #menu-principal {
+      width: 60%;
+      height: 8%;
+    }
+    #menu-principal ul {
+        margin-right: 2rem;
+        margin-top: 1.2rem;
+    }
+    
+    h1{
+        font-size: 3rem;
+        color: #020644;
+        margin-left: 1rem;
+    }
+    #inicio {
+      width: 23rem;
+      height: 20rem;
+      margin-left: 0.1rem;
+      margin-top:1rem ;
+      border-radius: 2rem;
+      
+    }
+     #inicio img {
+      width: 25rem;
+      height: 40rem;
+      margin: 0 auto;
+      margin-top: -10rem;
+      margin-left: 3rem;
+      border-radius: 5rem;
+     }
+.timeline {
+    margin-left: 2rem !important; 
+    max-width: 100%;
+    border-left: 0.6rem solid #01055d;
+    margin-left: 2rem;
+  }
+
+  /* timeline items */
+  .timeline-item {
+    left: 0 !important; 
+    width: 100%; 
+    display: flex; 
+  }
+
+  /* timeline content */
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 1rem !important; 
+    text-align: right !important;
+
+    width: 80%;
+  }
+
+  /* bolinhas */
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    margin-left: 0 !important; /* reposiciona as bolinhas */
+    left: -3.6rem !important;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1023px){
+  #menu-principal {
+      width: 50%;
+      height: 8%;
+    }
+    #menu-principal ul {
+        margin-right: 2rem;
+        margin-top: 1.2rem;
+    }
+    
+    h1{
+        font-size: 4rem;
+        color: #020644;
+        margin-left: 1rem;
+        margin-top: 10rem;
+    }
+    #inicio {
+      width: 33.7rem;
+      height: 21.2rem;
+      margin-left: 0.1rem;
+      margin-top:1rem ;
+      border-radius: 2rem;
+      
+    }
+     #inicio img {
+      width: 38rem;
+      height: 42rem;
+      margin: 0 auto;
+      margin-top: -10rem;
+      margin-left: 3rem;
+      border-radius: 5rem;
+     }
+.timeline {
+    margin-left: 2rem !important; 
+    max-width: 100%;
+    border-left: 0.6rem solid #01055d;
+    margin-left: 2rem;
+  }
+
+  /* timeline items */
+  .timeline-item {
+    left: 0 !important; 
+    width: 100%; 
+    display: flex; 
+  }
+
+  /* timeline content */
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    margin-left: 1rem !important; 
+    text-align: right !important;
+
+    width: 80%;
+  }
+
+  /* bolinhas */
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    margin-left: 0 !important; /* reposiciona as bolinhas */
+    left: -3.6rem !important;
+  }
+}
+@media screen and (min-width:1024px) and (max-width:1280px){
+  #menu-principal {
+      width: 50%;
+      height: 8%;
+    }
+    #menu-principal ul {
+        margin-right: 2rem;
+        margin-top: 1.2rem;
+    }
+    
+    h1{
+        font-size: 5rem;
+        color: #020644;
+        margin-left: 10rem;
+        margin-top: 10rem;
+    }
+    #inicio {
+      max-width: 65%;
+      max-height: 34.8rem;
+      margin-left: 10rem;
+      margin-top:1rem ;
+      border-radius: 2rem;
+      
+    }
+     #inicio img {
+      width: 45rem;
+      margin: 0 auto;
+      margin-top: -15.6rem;
+      margin-left: 5.4rem;
+      border-radius: 5rem;
+     }
+     .timeline {
+    margin-left: 34rem !important; 
+    max-width: 100%;
+    border-left: 0.6rem solid #01055d;
+    margin-top: -5rem;
+  }
+  .timeline-item {
+     
+    width: 100%; 
+    display: flex; 
+  }
+  .timeline-content {
+      width: 22rem;
+  }
+
+  /* Ajuste fino só no lado esquerdo */
+  .timeline-item.left .timeline-content {
+      margin-left: 8rem; 
+    }
+    .timeline-item.right .timeline-content {
+  width: 18rem; 
+}
+
+}

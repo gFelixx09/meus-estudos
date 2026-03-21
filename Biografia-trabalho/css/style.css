@@ -1,0 +1,371 @@
+body {
+   padding: 0;
+   margin: 0;
+   background-image:linear-gradient(rgba(0,0,0,0.4)), url(../img/Ubiratan.png);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   overflow-y: scroll;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+#menu-principal {
+    display: flex;
+    justify-content: center;
+    border: 0.070rem solid white;
+    background-color: rgba(100, 100, 100, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15rem;
+    padding: 0.1rem 1.8rem;
+    margin-top: 3rem;
+    position: fixed;
+    z-index: 1000;
+}
+#menu-principal ul {
+    display: flex;
+    list-style: none;
+    gap:2rem;
+}
+#menu-principal a {
+    color: white;
+    text-decoration: none;
+}
+#menu-principal ul li a:hover{
+    background-color: rgba(100, 100, 100, 0.9);
+    border-radius: 3rem;
+    padding:0.6rem 0.4rem ;
+    color: #000;
+    
+
+}
+#menu-principal ul li a.active {
+    background-color: rgba(0, 44, 187, 0.8);   
+    border-radius: 3rem;
+    padding: 0.7rem 1.2rem;
+    transform: scale(1.05);
+}
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 3rem;
+    color: rgb(2, 2, 124);
+    margin: 10rem;
+    margin-top: 12rem;
+    margin-bottom: 0.1rem;
+}
+#paragrafo1 {
+    font-size: 1.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(201, 204, 206);
+    margin: 10rem;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+#paragrafo2 {
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
+    color: antiquewhite;
+    margin: 10em;
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+}
+
+#biografia-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem ;
+    height: 35rem;
+    background-color: rgba(2, 2, 172, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 5rem;
+    border: 0.1rem solid white;
+    margin-top: 20rem;
+}
+#biografia-container img {
+    width: 30rem;
+    height: 45rem;
+    margin-right: 3rem;
+    border-radius: 5rem;
+    margin-top:4.5rem;
+}
+#titulo {
+    color: white;
+    max-width: 35rem;
+    margin-top: 0.04rem;
+}
+#titulo a {
+    color: #000;
+}
+#titulo h2 {
+    font-family: 'ubuntu', sans-serif;
+}
+
+#frases h2 {
+    text-align: center;
+    color: white;
+    font-family: "Ubuntu",sans-serif;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+}
+#titulo p {
+    font-family: sans-serif;
+}
+.Frases-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+}
+
+.citação img{
+    width: 17rem;
+    height: 15rem;
+    justify-content: center;
+    margin-left: 3rem;
+    gap: 20rem;
+    border-radius: 3rem;
+    margin-left: 7rem;
+    border: 0.2rem solid white
+}
+.citação p{
+    max-width: 25rem;
+    color: white;
+    margin-left: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+#curiosidade{
+    justify-content: center;
+    align-items: center;
+    width: 46rem;
+    height: 14rem;
+    background-color: rgba(2, 2, 172, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 2rem;
+    border: 0.1rem solid white;
+    margin-left: 24rem;
+    margin-top: 2rem;
+}
+#curiosidade ul {
+    margin-top: 2rem;
+    color: white;
+    list-style: none;
+    font-size: 1.1rem;
+}
+#linha-separadora{
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);;
+    margin-top: 5rem;
+}
+.final {
+    background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(60,60,60,0.4));
+    backdrop-filter: blur(4px); 
+    padding: 4rem;
+    margin: 0 auto;
+}
+.final p{
+    text-align: center;
+    color: rgb(241, 231, 231);
+    margin-top: 3rem;
+}
+.img-principal {
+    width: 16rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: -7rem;
+}
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    
+    
+}
+.cont img {
+    width: 2rem;
+    background-color: rgba(255, 255, 255, 0.8) ;
+    padding: 0.3rem;
+    border-radius: 2rem;
+    margin-top: -1rem;
+
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aparecer 0.8s ease forwards;
+}
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.3s ease;
+    
+}
+.scroll-fade.visivel {
+    opacity: 1;
+    transform: translateY(0);
+} 
+.scroll-fade:nth-child(1) {transition-delay: 0.2s; }
+.scroll-fade:nth-child(2) {transition-delay: 0.4s; }
+.scroll-fade:nth-child(3) {transition-delay: 0.5s; }
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.fade-in:nth-child(1) { animation-delay: 0s; }
+.fade-in:nth-child(2) { animation-delay: 0.3s; }
+.fade-in:nth-child(3) { animation-delay: 0.4s; }
+
+/* ======= CELULARES ======= */
+@media screen and (max-width: 768px) {
+    #menu-principal {
+        width: 50%;
+        height: 4%;
+        padding: 0.5rem 1rem;
+        top: 0.5rem;
+    }
+
+    #menu-principal ul {
+        gap: 1rem;
+        margin: 0;
+        margin-top: 0.3rem;
+        margin-right: 1.3rem;
+    }
+
+    #menu-principal a {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 8rem 1rem 1rem;
+        text-align: center;
+    }
+
+    #paragrafo1,
+    #paragrafo2 {
+        width: 90%;
+        margin: 1rem auto;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #biografia-container {
+        flex-direction: column;
+        width: 95%;
+        margin: 5rem auto;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    #biografia-container img {
+        display: none;
+    }
+
+    #titulo {
+        width: 100%;
+        text-align: center;
+    }
+
+    #frases h2 {
+        font-size: 1.8rem;
+    }
+
+    .Frases-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 3rem auto;
+        gap: 2rem;
+    }
+
+    .citação img {
+        width: 16rem;
+        margin: 0;
+        margin-left: 6rem;
+    }
+
+    .citação p {
+        font-size: 1rem;
+        width: 90%;
+    }
+     #curiosidade {
+        width: 80%;
+        height: auto;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        text-align: left;
+    }
+
+    #curiosidade ul {
+        font-size: 1rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+/* ======= TABLETS ======= */
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    #menu-principal {
+        width: 70%;
+        padding: 0.6rem 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 9rem;
+        text-align: center;
+    }
+
+    #paragrafo1,
+    #paragrafo2 {
+        width: 80%;
+        margin: 1rem auto;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    #biografia-container {
+        width: 85%;
+        height: auto;
+        margin: 8rem auto;
+        padding: 3rem;
+    }
+
+    #biografia-container img {
+        width: 20rem;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    #titulo {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .Frases-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .citação img {
+        width: 14rem;
+    }
+
+    .rodape {
+        width: 100%;
+    }
+    
+}
+
